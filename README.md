@@ -9,3 +9,7 @@ npm install react-doom
 
 An then created a folder called "pages" in the root of the project. inside this folder was created a file name "index.js" page file
 with default name.
+
+Get heyboard inputs in javaScript
+http://keycode.info/
+

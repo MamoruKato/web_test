@@ -1,0 +1,166 @@
+#index-gallery
+{
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 10px;
+    grid-template-areas:
+    "gallery-p gallery-p gallery-p gallery-p"
+    "gallery-h2 gallery-h2 gallery-h2 gallery-h2"
+    "img1 img2 img3 img4";
+
+}
+
+#index-gallery .gallery-image
+{
+    width: 100%;
+    height: 300px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position:center;
+    cursor: pointer;
+}
+
+
+
+/*  Images  */ 
+
+/*  Remember that the images are placed inside a grid. You can make a image cover two spaces of
+a grid chaging its height property to size_times_you_want_the_height_to_cover*grid_height +
+(size_times_you_want_the_height_to_cover -1)*gap  */ 
+
+
+#index-gallery p
+{
+    grid-area: gallery-p;
+}
+
+#index-gallery h2
+{
+    grid-area: gallery-h2;
+}
+
+
+
+#index-gallery .img1
+{
+    grid-area: img1;
+    background-image: url("../images/thumbs/img1.jpg");
+}
+
+#index-gallery .img2
+{
+    grid-area: img2;
+    background-image: url("../images/thumbs/img2.jpg");
+}
+
+#index-gallery .img3
+{
+    grid-area: img3;
+    background-image: url("../images/thumbs/img3.jpg");
+}
+
+#index-gallery .img4
+{
+    grid-area: img4;
+    background-image: url("../images/thumbs/img4.jpg");
+}
+
+/*   Gallery image titles  */
+.gallery-image div
+{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.gallery-image a
+{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.gallery-image div:hover
+{
+    opacity: 0.8;
+    transition: all ease-in-out 100ms;
+}
+
+/* Popup window when clicked */
+
+.image-window
+{
+     width: 100vw;
+     height: 100vh;
+
+     background-color: rgba(0,0,0,0.8);
+     position: fixed;
+     top: 0;
+     left: 0;
+
+     cursor: pointer;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     z-index: 100;
+
+}
+
+.image-window img
+{
+    max-height: 80vh;
+    max-width: 80vw;
+
+}
+
+/* styling for next and prev buttons nearby full image */
+
+.image-btn-next
+{
+    display: block;
+    padding: 6px 10px;
+    border-radius: 4px;
+    background-color: #111111;
+    position: fixed;
+    top: 48vh;
+    z-index: 500;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+
+}
+
+.image-btn-next:hover
+{
+    opacity: 0.8;
+}
+
+
+.image-btn-prev
+{
+    display: block;
+    padding: 6px 10px;
+    border-radius: 4px;
+    background-color: #111111;
+    position: fixed;
+    top: 48vh;
+    z-index: 500;
+    font-family: 'Times New Roman', Times, serif;
+    color: white;
+    cursor: pointer;
+    text-transform: uppercase;
+
+}
+
+.image-btn-prev:hover
+{
+    opacity: 0.8;
+}
